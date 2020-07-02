@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>rem布局样例</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef3f6;
+    }
+
+    .btndelete {
+      border: 0.01rem solid #fc5630;
+      width: 1.1rem;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      background: none;
+      color: #fc5630;
+      border-radius: 0.25rem;
+      outline: none;
+      font-size: 0.28rem;
+    }
+
+    .wrap {
+      position: relative;
+      padding-top: 1.2rem;
+    }
+
+    .wrap .bg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 3.5rem;
+      background: url(data:image/png;base64,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);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .wrap .studetail {
+      height: 3.6rem;
+      background: #fff;
+      border-radius: 0.08rem;
+      margin: 0 .2rem;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0px 0.03rem 0.1rem #ddd;
+      overflow: hidden;
+    }
+
+    .wrap .studetail .btndelete {
+      position: absolute;
+      top: 0.3rem;
+      right: 0.3rem;
+    }
+
+    .wrap .studetail .studetail_top,
+    .wrap .studetail .studetail_bottom {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .wrap .studetail .studetail_top {
+      height: 2.6rem;
+      font-size: 0.3rem;
+      color: #333;
+    }
+
+    .wrap .studetail .studetail_top .stu_info {
+      height: 1.9rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .wrap .studetail .studetail_top .stu_info .img {
+      height: 1.4rem;
+      width: 1.4rem;
+      border: 0.06rem solid #c5e9fa;
+      border-radius: 50%;
+      ;
+    }
+
+    .wrap .studetail .studetail_bottom {
+      height: 1rem;
+      border-top: 0.01rem dashed #ddd;
+      font-size: 0.26rem;
+      color: #666;
+    }
+
+    .wrap .parent_box {
+      padding: 0 .2rem;
+    }
+
+    .wrap .parent_box .parent_title {
+      padding: 0.36rem 0 0.16rem;
+      font-weight: bold;
+      font-size: 0.28rem;
+      color: #333;
+    }
+
+    .wrap .parent_box .parent_list .item:first-child {
+      border-top: 0.01rem solid #e1e7ec;
+    }
+
+    .wrap .parent_box .parent_list .item {
+      padding: 0 .24rem;
+      height: 1rem;
+      border-bottom: 0.01rem solid #e1e7ec;
+      background: #fff;
+      font-size: 0.28rem;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wrap .determine {
+      width: 3.4rem;
+      line-height: 1rem;
+      margin: 0.6rem auto;
+      color: #fff;
+      border-radius: 0.5rem;
+      font-size: 0.36rem;
+      text-align: center;
+      background: linear-gradient(to right, #fc8b05, #fc7305);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="bg"></div>
+    <div class="studetail">
+      <button class="btndelete" type="button" name="button">移除</button>
+      <div class="studetail_top">
+        <div class="stu_info">
+          <div class="img"></div>
+          <div class="name">詹姆斯</div>
+        </div>
+      </div>
+      <div class="studetail_bottom">
+        <div>三年二班的刘小，刘迪家长的孩子</div>
+      </div>
+    </div>
+    <div class="parent_box">
+      <div class="parent_title">关联家长</div>
+      <div class="parent_list">
+        <div class="item">
+          <div>刘吴迪(爸爸)</div>
+          <div>13659646789</div>
+          <button class="btndelete" type="button" name="button">移除</button>
+        </div>
+        <div class="item">
+          <div>刘吴迪(爸爸)</div>
+          <div>13659646789</div>
+          <button class="btndelete" type="button" name="button">移除</button>
+        </div>
+        <div class="item">
+          <div>刘吴迪(爸爸)</div>
+          <div>13659646789</div>
+          <button class="btndelete" type="button" name="button">移除</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="determine">
+      确 定
+    </div>
+  </div>
+
+  <script>
+    // https://blog.csdn.net/TCF_JingFeng/article/details/80814015
+    /*
+    设计稿的宽度：designWidth
+    允许自适应的最大宽度（超过这个值屏幕元素不在自适应增大）:maxWidth
+    页面顶部加上：<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+    这段js的传入两个参数:一个为设计稿实际宽度，一个为显示的最大宽度（允许的屏幕最大宽度，用来限制屏幕过大之后元素还会自适应增大的）
+    例如设计稿为750，最大宽度为600，则为(750,600)，屏幕大于600之后就不会自适应变大了，也相当于在用@media属性时min-width只设置到了600，没有后面的屏幕尺寸，就不会再变化了
+    公式：1rem = 浏览器屏幕宽（width） * 100 / 设计稿宽(designWidth)
+    (750,750)含义1rem = clientWidth * 100 / 750
+    (750,2160)含义1rem = clientWidth * 100 / 750
+    clientWidth是动态获取的
+    后面的750和2160表示maxWidth，如果浏览器窗口（clientWidth）大于这个数值就将clientWidth设置成这个数值(maxWidth)。而width是根据屏幕变化动态获取的
+    */
+    ; (function (designWidth, maxWidth) {
+      var doc = document,
+        win = window,
+        docEl = doc.documentElement,
+        remStyle = document.createElement("style"),
+        tid;
+
+      function refreshRem() {
+        var clientWidth = docEl.getBoundingClientRect().width;//获取document的宽度,浏览器屏幕宽度
+        // alert(clientWidth)
+        maxWidth = maxWidth || 540;//短路运算符，如果前面式子为false再执行后面，如果赋值了maxWidth那么maxWidth=maxWidth,否则没有赋值那么maxWidth为false,就会执行maxWidth=540
+        clientWidth > maxWidth && (clientWidth = maxWidth);//短路运算符，如果前面式子true再执行后面
+        var rem = clientWidth * 100 / designWidth;
+        remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+      }
+
+      if (docEl.firstElementChild) {
+        docEl.firstElementChild.appendChild(remStyle);
+      } else {
+        var wrap = doc.createElement("div");
+        wrap.appendChild(remStyle);
+        doc.write(wrap.innerHTML);
+        wrap = null;
+      }
+      refreshRem();
+      //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+
+
+      win.addEventListener("resize", function () {
+        clearTimeout(tid); //防止执行两次
+        tid = setTimeout(refreshRem, 300);
+      }, false);
+
+      /*
+      浏览器后退的时候重新计算,为了查看页面是直接从服务器上载入还是从缓存中读取，你可以使用 PageTransitionEvent 对象的 persisted 属性来判断。
+      如果页面从浏览器的缓存中读取该属性返回 ture，否则返回 false
+      */
+      win.addEventListener("pageshow", function (e) {
+        if (e.persisted) {
+          clearTimeout(tid);
+          tid = setTimeout(refreshRem, 300);
+        }
+      }, false);
+
+      /*
+      为什么一般多是 html{font-size:62.5%;} 而不是 html{font-size:10px;}呢？
+      因为有些浏览器默认的不是16px，或者用户修改了浏览器默认的字体大小（因浏览器分辨率大小，视力，习惯等因素）。
+      如果我们将其设置为10px，一定会影响在这些浏览器上的效果，所以最好用绝大多数用户默认的16作为基数 * 62.5% 得到我们需要的10px。
+      实际项目设置成 font-size: 62.5%可能会出现问题，因为chrome不支持小于12px的字体，计算小于12px的时候，会默认取12px去计算，导致chrome的em/rem计算不准确。
+      针对这个现象，可以尝试设置html字体为100px，body 修正为16px，这样 0.1rem 就是 10px，而body的字体仍然是默认大小，不影响未设置大小的元素的默认字体的大小。
+      */
+      if (doc.readyState === "complete") {
+        doc.body.style.fontSize = "16px";//页面元素默认16px，如果不设置将是自动为16px显示
+      } else {
+        doc.addEventListener("DOMContentLoaded", function (e) {
+          doc.body.style.fontSize = "16px";
+        }, false);
+      }
+    })(750, 750);
+  </script>
+</body>
+
+</html>
