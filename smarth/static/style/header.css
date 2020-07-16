@@ -86,13 +86,13 @@
     transition: all .3s cubic-bezier(.7,1,.7,1);
     transform-origin: center center;
 }
-.navbar-default .navbar-toggle .icon-bar:nth-child(2) {
+.navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
     transform: rotate(45deg) translate(4.5px, 3.5px);
 }
-.navbar-default .navbar-toggle .icon-bar:nth-child(3) {
+.navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(3) {
     opacity: 0;
 }
-.navbar-default .navbar-toggle .icon-bar:nth-child(4) {
+.navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(4) {
     transform: rotate(-45deg) translate(5px,-4px);
 }
 .navbar-default .navbar-toggle.collapsed .icon-bar:nth-child(2) {
