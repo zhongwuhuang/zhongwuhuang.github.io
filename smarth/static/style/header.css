@@ -49,6 +49,7 @@
 }
 .navbar-default .navbar-toggle {
     border: none;
+    margin-right: 5px;
 }
 .navbar-default .navbar-toggle .icon-bar {
     transition: all .3s cubic-bezier(.7,1,.7,1);
@@ -59,6 +60,7 @@
 }
 .navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(3) {
     opacity: 0;
+    transform: translateX(5px);
 }
 .navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(4) {
     transform: rotate(-45deg) translate(5px,-4px);

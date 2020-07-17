@@ -5,22 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
-    <link rel="shortcut icon" href="./static/img/ico/favicon.ico">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
-        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
-    <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.min.css" rel="stylesheet">
-
-    <!-- 自定义 -->
-    <link rel="stylesheet" href="./static/style/reset.css">
-    <link rel="stylesheet" href="./static/style/common.css">
+    <title>首页</title>
+    <script src="../../static/js/commonCss.js"></script>
     <style>
         .wrap{
             background: #fff;
@@ -93,12 +79,12 @@
 
         <!-- 产品介绍 -->
         <div class="products container">
-            <h2 class="plate_title">明星产品</h2>
+            <h2 class="wow fadeIn plate_title" data-wow-duration=".3s">明星产品</h2>
             <div class="products_con">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="img_box">
-                            <img class="img-responsive img_hover wow fadeInUp" src="http://demo.qfpffmp.cn/cssthemes5/twts_201_aironepage/img/970x647/01.jpg" alt="Latest Products Image"
+                            <img class="img-responsive img_hover wow fadeIn" src="http://demo.qfpffmp.cn/cssthemes5/twts_201_aironepage/img/970x647/01.jpg" alt="Latest Products Image"
                                 data-wow-duration=".3" data-wow-delay=".1s" >
                         </div>
                         <!-- <h4><a href="#">Workspace</a> <span class="text-uppercase margin-l-20">Management</span></h4>
@@ -129,22 +115,14 @@
                     </div>
                 </div>
             </div>
+
+            <div class="_btn">button</div>
         </div>
     </div>
 
     <footer></footer>
+    <script src="../../static/js/commonJs.js"></script>
 
-    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-    <!-- 加载 swiper -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
-    <!-- 加载 wow -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <!-- 加载 自适应rem脚本 -->
-    <script src="./static/js/rem.js"></script>
-    <script src="./static/js/common.js"></script>
     <script>
         var swiperPro = new Swiper('.swiperPro', {
             loop: true,
@@ -153,14 +131,13 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
-
             // 如果需要前进后退按钮
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
             autoplay: {
-                disableOnInteraction: true, //手动滑动之后不打断播放
+                disableOnInteraction: false, //手动滑动之后不打断播放
                 delay: 3000
             },
         })
@@ -169,7 +146,7 @@
         var wow = new WOW({
             boxClass: 'wow',
             animateClass: 'animated',
-            offset: 0,
+            offset: 50,
             mobile: true,
             live: true
         });

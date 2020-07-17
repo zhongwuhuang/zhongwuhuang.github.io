@@ -22,14 +22,14 @@
     background: #515769;
     border-radius: 3px;
     opacity: 0;
-    transform: translate3d(50px,0,0);
+    transform: translateX(60px);
     transition-duration: .3s;
     transition-property: all;
     transition-timing-function: cubic-bezier(.7,1,.7,1);    
 }
 .updown.updown_show{
     opacity: 0.4;
-    transform: translate3d(0,0,0);
+    transform: translateX(0);
 }
 .updown:hover {
     opacity: 1;

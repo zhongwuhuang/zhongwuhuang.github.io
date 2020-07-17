@@ -7,5 +7,30 @@
     transition: all .3s cubic-bezier(.7,1,.7,1);
 }
 .img_hover:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+/* 按钮 */
+._btn{
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    box-shadow: 0 0 0 3px #6cc091 inset;
+    color: #6cc091;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    padding: 0 24px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+._btn:hover {
+    background-color: rgba(108, 192, 145, 0.15);
 }

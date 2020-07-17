@@ -2,8 +2,9 @@ $(function () {
 
     // 引入头部导航
     // $.ajaxSetup({ cache: false });
-    $('header').load("./components/header.html", initHead);
-    $('footer').load("./components/footer.html", initFoot);
+    $('header').load("../../components/header.html", initHead);
+    $('footer').load("../../components/footer.html", initFoot);
+    
     // 头部背景显示隐藏
     function initHead() {
         function showHeader() {
