@@ -1,0 +1,11 @@
+.img_box{
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.img_hover{
+    transition: all .3s cubic-bezier(.7,1,.7,1);
+}
+.img_hover:hover{
+    transform: scale(1.1);
+}

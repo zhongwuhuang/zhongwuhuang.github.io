@@ -1,49 +1,11 @@
-/* .navbar {
-    min-height: 0.5rem;
+/* logo */
+.logo{
+    font-size: 30px;
+    font-weight: bold;
 }
-.navbar-brand{
-    height: 0.5rem;
-    padding: 0.15rem 0.15rem;
-    font-size: 0.18rem;
-    line-height: 0.2rem;    
+.logo>span{
+    color: #17bed2;
 }
-
-@media (max-width: 768px){
-    .navbar-nav {
-        margin: 0.075rem -15px;
-    }
-}
-.navbar-nav>li>a {
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
-    line-height: 0.2rem;
-    font-size: 0.16rem;
-}
-@media (min-width: 768px){
-    .navbar-nav>li>a {
-        padding-top: 0.15rem;
-        padding-bottom: 0.15rem;
-    }
-}
-
-.navbar-header{
-    position: relative;
-}
-.navbar-toggle {
-    position: absolute;
-    padding: 0.09rem 0.1rem;
-    margin: 0;
-    right: 0.15rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.navbar-toggle .icon-bar {
-    width: 0.22rem;
-}
-.navbar-toggle .icon-bar+.icon-bar {
-    margin-top: 0.04rem;
-} */
-
 
 @media (min-width: 768px){
     .navbar {
@@ -64,15 +26,21 @@
 @media (max-width: 768px){
     .navbar {
         background: rgba(31, 33, 42, 0.75)!important;
+        /* background: rgba(0, 0, 0, 0.36)!important; */
     }    
     .nav_a{
         color: #fff!important;
     }
+    .nav>li>.nav_a {
+        padding: 6px 15px;
+        margin: 0 6px;
+    }    
 }
 .navbar-default {
     background-color: #fff;
     border: none;
-    border-bottom: 1px solid #e7e7e7;
+    /* border-bottom: 1px solid #edf0f2; */
+    border-bottom: 1px solid rgba(255,255,255,.2);
     transition: all .3s cubic-bezier(.7,1,.7,1);
 }
 /* 手机端下拉按钮 */
@@ -128,14 +96,15 @@
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    width: 9px;
-    height: 2px;
+    width: 10px;
+    height: 3px;
+    border-radius: 4px;
     background: #17bed2;
     opacity: 0;
     transition-duration: .4s;
     transition-property: all;
     transition-timing-function: cubic-bezier(.7,1,.7,1);    
 }
-.navbar-default .navbar-nav>.active>a::after {
+.navbar-default .navbar-nav>._active>a::after {
     opacity: 1;
 }
